@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		668597841D5533AC00601478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668597831D5533AC00601478 /* AppDelegate.swift */; };
+		6685978B1D5533AC00601478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6685978A1D5533AC00601478 /* Assets.xcassets */; };
+		6685978E1D5533AC00601478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6685978C1D5533AC00601478 /* LaunchScreen.storyboard */; };
+		6685979A1D569A1100601478 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668597991D569A1100601478 /* MainViewController.swift */; };
+		66AC89CF1D5982A600AA86CF /* poplur.png in Resources */ = {isa = PBXBuildFile; fileRef = 66AC89CE1D5982A600AA86CF /* poplur.png */; };
+		66AC89D11D598C7500AA86CF /* poplursplash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66AC89D01D598C7400AA86CF /* poplursplash.mp4 */; };
+		66AC89DC1D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AC89D91D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.m */; };
+		66AC89DD1D5A831500AA86CF /* MHYahooParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AC89DB1D5A831500AA86CF /* MHYahooParallaxView.m */; };
+		66AC89E01D5A834300AA86CF /* MHYahooWeatherParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AC89DF1D5A834300AA86CF /* MHYahooWeatherParallaxCell.m */; };
+		66AC89E31D5A952400AA86CF /* MHTsekotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AC89E21D5A952400AA86CF /* MHTsekotCell.m */; };
+		66D9FB2B1D58FA690029C38F /* speakervideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 66D9FB2A1D58FA690029C38F /* speakervideo.mov */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		668597801D5533AC00601478 /* poplur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poplur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		668597831D5533AC00601478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6685978A1D5533AC00601478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6685978D1D5533AC00601478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6685978F1D5533AC00601478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		668597991D569A1100601478 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		66AC89CE1D5982A600AA86CF /* poplur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poplur.png; sourceTree = "<group>"; };
+		66AC89D01D598C7400AA86CF /* poplursplash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = poplursplash.mp4; sourceTree = "<group>"; };
+		66AC89D71D5A831400AA86CF /* poplur-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poplur-Bridging-Header.h"; sourceTree = "<group>"; };
+		66AC89D81D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYahooParallaxCollectionViewLayout.h; sourceTree = "<group>"; };
+		66AC89D91D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYahooParallaxCollectionViewLayout.m; sourceTree = "<group>"; };
+		66AC89DA1D5A831500AA86CF /* MHYahooParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYahooParallaxView.h; sourceTree = "<group>"; };
+		66AC89DB1D5A831500AA86CF /* MHYahooParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYahooParallaxView.m; sourceTree = "<group>"; };
+		66AC89DE1D5A834300AA86CF /* MHYahooWeatherParallaxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYahooWeatherParallaxCell.h; sourceTree = "<group>"; };
+		66AC89DF1D5A834300AA86CF /* MHYahooWeatherParallaxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYahooWeatherParallaxCell.m; sourceTree = "<group>"; };
+		66AC89E11D5A952400AA86CF /* MHTsekotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTsekotCell.h; sourceTree = "<group>"; };
+		66AC89E21D5A952400AA86CF /* MHTsekotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTsekotCell.m; sourceTree = "<group>"; };
+		66D9FB2A1D58FA690029C38F /* speakervideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = speakervideo.mov; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6685977D1D5533AB00601478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		668597771D5533AB00601478 = {
+			isa = PBXGroup;
+			children = (
+				668597821D5533AC00601478 /* poplur */,
+				668597811D5533AC00601478 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		668597811D5533AC00601478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				668597801D5533AC00601478 /* poplur.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		668597821D5533AC00601478 /* poplur */ = {
+			isa = PBXGroup;
+			children = (
+				66AC89D61D5A829000AA86CF /* MHYahooParallax */,
+				66AC89D51D5A823100AA86CF /* Other */,
+				66AC89D41D5A822000AA86CF /* Controller */,
+				66AC89D31D5A820C00AA86CF /* Model */,
+				66AC89D21D5A820600AA86CF /* View */,
+			);
+			path = poplur;
+			sourceTree = "<group>";
+		};
+		66AC89D21D5A820600AA86CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6685978C1D5533AC00601478 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		66AC89D31D5A820C00AA86CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		66AC89D41D5A822000AA86CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				668597991D569A1100601478 /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		66AC89D51D5A823100AA86CF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				66D9FB2A1D58FA690029C38F /* speakervideo.mov */,
+				66AC89CE1D5982A600AA86CF /* poplur.png */,
+				66AC89D01D598C7400AA86CF /* poplursplash.mp4 */,
+				668597831D5533AC00601478 /* AppDelegate.swift */,
+				6685978F1D5533AC00601478 /* Info.plist */,
+				6685978A1D5533AC00601478 /* Assets.xcassets */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		66AC89D61D5A829000AA86CF /* MHYahooParallax */ = {
+			isa = PBXGroup;
+			children = (
+				66AC89E11D5A952400AA86CF /* MHTsekotCell.h */,
+				66AC89E21D5A952400AA86CF /* MHTsekotCell.m */,
+				66AC89DE1D5A834300AA86CF /* MHYahooWeatherParallaxCell.h */,
+				66AC89DF1D5A834300AA86CF /* MHYahooWeatherParallaxCell.m */,
+				66AC89D81D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.h */,
+				66AC89D91D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.m */,
+				66AC89DA1D5A831500AA86CF /* MHYahooParallaxView.h */,
+				66AC89DB1D5A831500AA86CF /* MHYahooParallaxView.m */,
+				66AC89D71D5A831400AA86CF /* poplur-Bridging-Header.h */,
+			);
+			name = MHYahooParallax;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6685977F1D5533AB00601478 /* poplur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 668597921D5533AC00601478 /* Build configuration list for PBXNativeTarget "poplur" */;
+			buildPhases = (
+				6685977C1D5533AB00601478 /* Sources */,
+				6685977D1D5533AB00601478 /* Frameworks */,
+				6685977E1D5533AB00601478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = poplur;
+			productName = poplur;
+			productReference = 668597801D5533AC00601478 /* poplur.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		668597781D5533AB00601478 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Apptist;
+				TargetAttributes = {
+					6685977F1D5533AB00601478 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 6685977B1D5533AB00601478 /* Build configuration list for PBXProject "poplur" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 668597771D5533AB00601478;
+			productRefGroup = 668597811D5533AC00601478 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6685977F1D5533AB00601478 /* poplur */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6685977E1D5533AB00601478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AC89D11D598C7500AA86CF /* poplursplash.mp4 in Resources */,
+				6685978E1D5533AC00601478 /* LaunchScreen.storyboard in Resources */,
+				66D9FB2B1D58FA690029C38F /* speakervideo.mov in Resources */,
+				6685978B1D5533AC00601478 /* Assets.xcassets in Resources */,
+				66AC89CF1D5982A600AA86CF /* poplur.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6685977C1D5533AB00601478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				668597841D5533AC00601478 /* AppDelegate.swift in Sources */,
+				66AC89E01D5A834300AA86CF /* MHYahooWeatherParallaxCell.m in Sources */,
+				66AC89E31D5A952400AA86CF /* MHTsekotCell.m in Sources */,
+				66AC89DD1D5A831500AA86CF /* MHYahooParallaxView.m in Sources */,
+				6685979A1D569A1100601478 /* MainViewController.swift in Sources */,
+				66AC89DC1D5A831500AA86CF /* MHYahooParallaxCollectionViewLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6685978C1D5533AC00601478 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6685978D1D5533AC00601478 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		668597901D5533AC00601478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		668597911D5533AC00601478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		668597931D5533AC00601478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = poplur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.poplur";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poplur/poplur-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		668597941D5533AC00601478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = poplur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mark-Meritt.poplur";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poplur/poplur-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6685977B1D5533AB00601478 /* Build configuration list for PBXProject "poplur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				668597901D5533AC00601478 /* Debug */,
+				668597911D5533AC00601478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		668597921D5533AC00601478 /* Build configuration list for PBXNativeTarget "poplur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				668597931D5533AC00601478 /* Debug */,
+				668597941D5533AC00601478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 668597781D5533AB00601478 /* Project object */;
+}
