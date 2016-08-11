@@ -9,24 +9,28 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController, MHYahooParallaxViewDelegate, MHYahooParallaxViewDatasource {
+class MainViewController: UIViewController {
     
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
     var videoPlayer: AVPlayer!
-    var parallaxView: MHYahooParallaxView! = MHYahooParallaxView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height), withViewType: MHYahooParallaxViewTypeHorizontal)
+    var swipeLeft: UISwipeGestureRecognizer!
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.parallaxView.registerClass(MHTsekotCell.classForCoder(), forCellWithReuseIdentifier: MHTsekotCell.reuseIdentifier())
+     
+        self.view.addSubview(movieView)
         
-        self.parallaxView.delegate = self
+        self.window = UIApplication.sharedApplication().windows.first
         
-        self.parallaxView.datasource = self
-        
-        self.view.addSubview(parallaxView)
 
-        self.parallaxView.addSubview(movieView)
+        
+        self.swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(MainViewController.swiped(_:)))
+        self.swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        
+        self.view.addGestureRecognizer(self.swipeLeft)
+
         
         let session: NSError! = nil
         let path: NSURL! = NSBundle.mainBundle().URLForResource("poplursplash", withExtension: "mp4")
@@ -74,30 +78,7 @@ class MainViewController: UIViewController, MHYahooParallaxViewDelegate, MHYahoo
     //    NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
 
     }
-    
-    func parallaxView(parallaxView: MHYahooParallaxView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
-        let tsekotCell = parallaxView.dequeueReusableCellWithReuseIdentifier(MHTsekotCell.reuseIdentifier(), forIndexPath: indexPath) as? MHTsekotCell
-        
-        tsekotCell!.tsekotTableView.tag = indexPath.row
-        tsekotCell!.tsekotTableView.contentOffset = CGPointMake(0.0, 0.0);
-        tsekotCell!.tsekotTableView.reloadData()
-        
-        return tsekotCell
-    }
-
-    func numberOfRowsInParallaxView(parallaxView: MHYahooParallaxView!) -> Int {
-        return 2
-    }
-    
-    /*
-    func parallaxViewDidScrollHorizontally(parallaxView: MHYahooParallaxView!, leftIndex: Int, leftImageLeftMargin: CGFloat, leftImageWidth: CGFloat, rightIndex: Int, rightImageLeftMargin: CGFloat, rightImageWidth: CGFloat) {
-       
-        if(leftIndex >= 0) {
-            let leftCell = parallaxView.cellForItemAtIndexPath(NSIndexPath.init(forRow: leftIndex, inSection: 0))
-            let tvCell = leftCell
-        }
-    }
-*/
+ 
     override func viewWillAppear(animated: Bool) {
         videoPlayer.play()
     }
@@ -119,7 +100,23 @@ class MainViewController: UIViewController, MHYahooParallaxViewDelegate, MHYahoo
         self.videoPlayer.play()
     }
     
-    
+    func swiped(recognizer: UISwipeGestureRecognizer) {
+        
+        switch recognizer.state {
+        case UIGestureRecognizerState.Began:
+            break;
+        case UIGestureRecognizerState.Changed:
+            break;
+        case UIGestureRecognizerState.Ended:
+            break;
+        default:
+            break;
+     
+        }
+        
+        
+        
+    }
  
 
     /*
