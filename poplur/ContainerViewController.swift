@@ -18,7 +18,12 @@ class ContainerViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView = UICollectionView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height), collectionViewLayout: UICollectionViewFlowLayout())
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: view.bounds.size.width, height: view.bounds.size.height)
+        layout.scrollDirection = .Horizontal
+        
+        collectionView = UICollectionView(frame: UIScreen.mainScreen().bounds, collectionViewLayout: layout)
         
         collectionView!.backgroundColor = UIColor.clearColor()
         collectionView?.registerClass(MainCell.classForCoder(), forCellWithReuseIdentifier: "MainCell")
