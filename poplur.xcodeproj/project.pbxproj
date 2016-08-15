@@ -23,9 +23,14 @@
 		66F426721D5C7DEE0073E49B /* launchpage.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426711D5C7DED0073E49B /* launchpage.png */; };
 		66F426741D5CF71B0073E49B /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F426731D5CF71B0073E49B /* ArtistViewController.swift */; };
 		66F426761D5CF7300073E49B /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F426751D5CF7300073E49B /* ArtistCell.swift */; };
+		69005D9A6DCC8ED229E6B7ED /* Pods_poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */; };
+		92BE94EC1D62269500D99295 /* InitialSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE94EB1D62269500D99295 /* InitialSignInViewController.swift */; };
+		92BE94EE1D62275A00D99295 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE94ED1D62275A00D99295 /* UserController.swift */; };
+		92BE94F01D62282700D99295 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92BE94EF1D62282700D99295 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		309CFD0DDAC0986597DF698E /* Pods-poplur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.release.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.release.xcconfig"; sourceTree = "<group>"; };
 		668597801D5533AC00601478 /* poplur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poplur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668597831D5533AC00601478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6685978A1D5533AC00601478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +49,11 @@
 		66F426711D5C7DED0073E49B /* launchpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchpage.png; sourceTree = "<group>"; };
 		66F426731D5CF71B0073E49B /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		66F426751D5CF7300073E49B /* ArtistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		92BE94EB1D62269500D99295 /* InitialSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSignInViewController.swift; sourceTree = "<group>"; };
+		92BE94ED1D62275A00D99295 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		92BE94EF1D62282700D99295 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.debug.xcconfig"; sourceTree = "<group>"; };
+		EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poplur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69005D9A6DCC8ED229E6B7ED /* Pods_poplur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +73,8 @@
 			children = (
 				668597821D5533AC00601478 /* poplur */,
 				668597811D5533AC00601478 /* Products */,
+				94CE19534F377CC1498EA27A /* Pods */,
+				DFDCF7EDE20E5550359F21D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +117,7 @@
 		66AC89D41D5A822000AA86CF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				92BE94ED1D62275A00D99295 /* UserController.swift */,
 				66F426731D5CF71B0073E49B /* ArtistViewController.swift */,
 				668597991D569A1100601478 /* MainViewController.swift */,
 				66F4266C1D5B69920073E49B /* ContainerViewController.swift */,
@@ -116,7 +130,9 @@
 			children = (
 				66F4266E1D5B77B10073E49B /* Images */,
 				668597831D5533AC00601478 /* AppDelegate.swift */,
+				92BE94EB1D62269500D99295 /* InitialSignInViewController.swift */,
 				6685978F1D5533AC00601478 /* Info.plist */,
+				92BE94EF1D62282700D99295 /* GoogleService-Info.plist */,
 				6685978A1D5533AC00601478 /* Assets.xcassets */,
 			);
 			name = Other;
@@ -137,6 +153,23 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		94CE19534F377CC1498EA27A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */,
+				309CFD0DDAC0986597DF698E /* Pods-poplur.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFDCF7EDE20E5550359F21D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 668597921D5533AC00601478 /* Build configuration list for PBXNativeTarget "poplur" */;
 			buildPhases = (
+				D8A76F9BA2D7274F9F3A41EC /* [CP] Check Pods Manifest.lock */,
 				6685977C1D5533AB00601478 /* Sources */,
 				6685977D1D5533AB00601478 /* Frameworks */,
 				6685977E1D5533AB00601478 /* Resources */,
+				259B9D7EBD706F1672627626 /* [CP] Embed Pods Frameworks */,
+				31687211C71F58704C9C5EA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,12 +240,61 @@
 				66F426681D5AB1F60073E49B /* artistpage - roy woods.png in Resources */,
 				6685978B1D5533AC00601478 /* Assets.xcassets in Resources */,
 				66AC89CF1D5982A600AA86CF /* poplur.png in Resources */,
+				92BE94F01D62282700D99295 /* GoogleService-Info.plist in Resources */,
 				66F426671D5AB1F60073E49B /* artistpage - desiigner.png in Resources */,
 				66F426691D5AB1F60073E49B /* artistpage - safe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		259B9D7EBD706F1672627626 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poplur/Pods-poplur-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31687211C71F58704C9C5EA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poplur/Pods-poplur-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8A76F9BA2D7274F9F3A41EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6685977C1D5533AB00601478 /* Sources */ = {
@@ -218,6 +303,8 @@
 			files = (
 				668597841D5533AC00601478 /* AppDelegate.swift in Sources */,
 				6685979A1D569A1100601478 /* MainViewController.swift in Sources */,
+				92BE94EE1D62275A00D99295 /* UserController.swift in Sources */,
+				92BE94EC1D62269500D99295 /* InitialSignInViewController.swift in Sources */,
 				66F426761D5CF7300073E49B /* ArtistCell.swift in Sources */,
 				66F426701D5B783D0073E49B /* MainCell.swift in Sources */,
 				66F4266D1D5B69920073E49B /* ContainerViewController.swift in Sources */,
@@ -326,6 +413,7 @@
 		};
 		668597931D5533AC00601478 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -341,6 +429,7 @@
 		};
 		668597941D5533AC00601478 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309CFD0DDAC0986597DF698E /* Pods-poplur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
