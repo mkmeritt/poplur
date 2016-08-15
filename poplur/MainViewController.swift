@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController {
+class MainViewController: IndexViewController {
     
+       
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
     var videoPlayer: AVPlayer!
     var swipeLeft: UISwipeGestureRecognizer!
@@ -21,15 +22,8 @@ class MainViewController: UIViewController {
         
      
         self.view.addSubview(movieView)
-        
-        self.window = UIApplication.sharedApplication().windows.first
-        
-
-        
-        self.swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(MainViewController.swiped(_:)))
-        self.swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        
-        self.view.addGestureRecognizer(self.swipeLeft)
+     
+        self.view.backgroundColor = UIColor.blackColor()
 
         
         let session: NSError! = nil
@@ -73,9 +67,6 @@ class MainViewController: UIViewController {
         poplurImgView.image = poplurImg
 
         self.view.addSubview(poplurImgView)
-      //  movieView.layer.addSublayer(gradient)
-        
-    //    NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
 
     }
  
@@ -99,25 +90,6 @@ class MainViewController: UIViewController {
         self.videoPlayer.seekToTime(kCMTimeZero)
         self.videoPlayer.play()
     }
-    
-    func swiped(recognizer: UISwipeGestureRecognizer) {
-        
-        switch recognizer.state {
-        case UIGestureRecognizerState.Began:
-            break;
-        case UIGestureRecognizerState.Changed:
-            break;
-        case UIGestureRecognizerState.Ended:
-            break;
-        default:
-            break;
-     
-        }
-        
-        
-        
-    }
- 
 
     /*
     // MARK: - Navigation
