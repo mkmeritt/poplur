@@ -15,7 +15,7 @@ https://www.googleapis.com/youtube/v3/search?&channelId=UCE_M8A5yxnLfW0KghEeajjw
  
 */
 
-class InitialSignInViewController: UIViewController {
+class InitialSignInViewController: IndexViewController {
     
     var leftSideTitleAPI: NSString = "https://www.googleapis.com/youtube/v3/channels?part=snippet&type=channel&forUsername="
     var leftSideChannelAPI: NSString = "https://www.googleapis.com/youtube/v3/search?&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date"
@@ -35,7 +35,7 @@ class InitialSignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = UserController()
+   //     _ = UserController()
         
         self.API = String("\((leftSideChannelAPI as String) + (APIKey as String))")
         self.infoDictionaryAPI = [:]

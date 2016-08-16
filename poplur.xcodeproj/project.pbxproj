@@ -18,11 +18,16 @@
 		66726BDE1D6241F3000CC53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66726BDD1D6241F3000CC53A /* Assets.xcassets */; };
 		66726BE01D624203000CC53A /* InitialSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726BDF1D624203000CC53A /* InitialSignInViewController.swift */; };
 		66726BE21D62420E000CC53A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66726BE11D62420E000CC53A /* GoogleService-Info.plist */; };
+		66726BE41D626610000CC53A /* EditProfileDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726BE31D62660F000CC53A /* EditProfileDetailController.swift */; };
+		66726BE61D627183000CC53A /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726BE51D627182000CC53A /* ArtistViewController.swift */; };
+		66726BE81D62725A000CC53A /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726BE71D62725A000CC53A /* MovieController.swift */; };
+		66726BEA1D6288BB000CC53A /* toronto.png in Resources */ = {isa = PBXBuildFile; fileRef = 66726BE91D6288BB000CC53A /* toronto.png */; };
+		66726BEC1D629B88000CC53A /* safefeel.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66726BEB1D629B88000CC53A /* safefeel.mp4 */; };
 		6685978E1D5533AC00601478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6685978C1D5533AC00601478 /* LaunchScreen.storyboard */; };
 		6685979A1D569A1100601478 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668597991D569A1100601478 /* MainViewController.swift */; };
 		66DF1A5E1D5D1C5F00D35302 /* fastforward.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DF1A5C1D5D1C5F00D35302 /* fastforward.png */; };
 		66DF1A5F1D5D1C5F00D35302 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DF1A5D1D5D1C5F00D35302 /* rewind.png */; };
-		66F426741D5CF71B0073E49B /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F426731D5CF71B0073E49B /* ArtistViewController.swift */; };
+		66F426741D5CF71B0073E49B /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F426731D5CF71B0073E49B /* EditProfileController.swift */; };
 		66F4267C1D5D0C7F0073E49B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4267B1D5D0C7F0073E49B /* CityViewController.swift */; };
 		66F426A61D5D0D250073E49B /* artistpage - boogie.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F4267F1D5D0D240073E49B /* artistpage - boogie.png */; };
 		66F426A71D5D0D250073E49B /* artistpage - desiigner.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426801D5D0D240073E49B /* artistpage - desiigner.png */; };
@@ -77,13 +82,17 @@
 		66726BDD1D6241F3000CC53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66726BDF1D624203000CC53A /* InitialSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSignInViewController.swift; sourceTree = "<group>"; };
 		66726BE11D62420E000CC53A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		66726BE31D62660F000CC53A /* EditProfileDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileDetailController.swift; sourceTree = "<group>"; };
+		66726BE51D627182000CC53A /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		66726BE71D62725A000CC53A /* MovieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		66726BE91D6288BB000CC53A /* toronto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toronto.png; sourceTree = "<group>"; };
+		66726BEB1D629B88000CC53A /* safefeel.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = safefeel.mp4; path = ../symbols/safefeel.mp4; sourceTree = "<group>"; };
 		668597801D5533AC00601478 /* poplur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poplur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6685978D1D5533AC00601478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		668597991D569A1100601478 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		66DF1A5C1D5D1C5F00D35302 /* fastforward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fastforward.png; sourceTree = "<group>"; };
 		66DF1A5D1D5D1C5F00D35302 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
-		66F426731D5CF71B0073E49B /* ArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
-		66F426751D5CF7300073E49B /* ArtistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		66F426731D5CF71B0073E49B /* EditProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		66F4267B1D5D0C7F0073E49B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		66F4267F1D5D0D240073E49B /* artistpage - boogie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - boogie.png"; sourceTree = "<group>"; };
 		66F426801D5D0D240073E49B /* artistpage - desiigner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - desiigner.png"; sourceTree = "<group>"; };
@@ -122,7 +131,7 @@
 		66F426CC1D5D15480073E49B /* scrollUpWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrollUpWhite.png; sourceTree = "<group>"; };
 		66F426CD1D5D15480073E49B /* upvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upvote.png; sourceTree = "<group>"; };
 		66F426D41D5D16720073E49B /* poplur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poplur.png; sourceTree = "<group>"; };
-		92BE94ED1D62275A00D99295 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		92BE94ED1D62275A00D99295 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = designs/UserController.swift; sourceTree = "<group>"; };
 		BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.debug.xcconfig"; sourceTree = "<group>"; };
 		EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poplur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,11 +179,15 @@
 			isa = PBXGroup;
 			children = (
 				66726BDD1D6241F3000CC53A /* Assets.xcassets */,
+				66726BE71D62725A000CC53A /* MovieController.swift */,
 				663EF5EE1D5FC5E00076252D /* IndexViewController.swift */,
 				663EF5EB1D5FBEBB0076252D /* PageViewController.swift */,
-				66F426731D5CF71B0073E49B /* ArtistViewController.swift */,
+				66F426731D5CF71B0073E49B /* EditProfileController.swift */,
 				668597991D569A1100601478 /* MainViewController.swift */,
 				66F4267B1D5D0C7F0073E49B /* CityViewController.swift */,
+				66726BE31D62660F000CC53A /* EditProfileDetailController.swift */,
+				66726BE51D627182000CC53A /* ArtistViewController.swift */,
+				92BE94ED1D62275A00D99295 /* UserController.swift */,
 				66726BDF1D624203000CC53A /* InitialSignInViewController.swift */,
 				66726BE11D62420E000CC53A /* GoogleService-Info.plist */,
 				663EF5ED1D5FC09E0076252D /* Supporting Files */,
@@ -215,7 +228,6 @@
 				66F4269C1D5D0D250073E49B /* stats */,
 				66F426A11D5D0D250073E49B /* videopage */,
 				66F426C71D5D15480073E49B /* symbols */,
-				92BE94ED1D62275A00D99295 /* UserController.swift */,
 			);
 			path = designs;
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 		66F426921D5D0D250073E49B /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				66726BEB1D629B88000CC53A /* safefeel.mp4 */,
 				66F426931D5D0D250073E49B /* nyc_liberty.mov */,
 				66F426941D5D0D250073E49B /* nyc_subway.mov */,
 				66F426951D5D0D250073E49B /* poplursplash.mp4 */,
@@ -317,6 +330,7 @@
 		66F426C71D5D15480073E49B /* symbols */ = {
 			isa = PBXGroup;
 			children = (
+				66726BE91D6288BB000CC53A /* toronto.png */,
 				663EF5F61D61945F0076252D /* addImage.png */,
 				663EF5F41D617E510076252D /* bio.png */,
 				66DF1A5C1D5D1C5F00D35302 /* fastforward.png */,
@@ -436,6 +450,7 @@
 				66F426C31D5D0D250073E49B /* videopage - roy woods.png in Resources */,
 				66726BDE1D6241F3000CC53A /* Assets.xcassets in Resources */,
 				66F426AB1D5D0D250073E49B /* biopage - desiigner.png in Resources */,
+				66726BEA1D6288BB000CC53A /* toronto.png in Resources */,
 				66F426BB1D5D0D250073E49B /* profile page.png in Resources */,
 				66F426C01D5D0D250073E49B /* statspage - safe.png in Resources */,
 				66F426BD1D5D0D250073E49B /* statspage - boogie.png in Resources */,
@@ -447,6 +462,7 @@
 				663EF5F31D6127790076252D /* MainStoryboard.storyboard in Resources */,
 				66F426D31D5D15490073E49B /* upvote.png in Resources */,
 				66F426BF1D5D0D250073E49B /* statspage - roy woods.png in Resources */,
+				66726BEC1D629B88000CC53A /* safefeel.mp4 in Resources */,
 				66F426D01D5D15490073E49B /* play.png in Resources */,
 				66F426AF1D5D0D250073E49B /* citypage - newyork.png in Resources */,
 				66F426A61D5D0D250073E49B /* artistpage - boogie.png in Resources */,
@@ -516,13 +532,15 @@
 			files = (
 				663EF5EC1D5FBEBB0076252D /* PageViewController.swift in Sources */,
 				6685979A1D569A1100601478 /* MainViewController.swift in Sources */,
+				66726BE81D62725A000CC53A /* MovieController.swift in Sources */,
+				66726BE41D626610000CC53A /* EditProfileDetailController.swift in Sources */,
 				66726BE01D624203000CC53A /* InitialSignInViewController.swift in Sources */,
 				66F4267C1D5D0C7F0073E49B /* CityViewController.swift in Sources */,
 				663EF5EF1D5FC5E00076252D /* IndexViewController.swift in Sources */,
 				92BE94EE1D62275A00D99295 /* UserController.swift in Sources */,
-				66F426761D5CF7300073E49B /* ArtistCell.swift in Sources */,
 				66726BDA1D624172000CC53A /* AppDelegate.swift in Sources */,
-				66F426741D5CF71B0073E49B /* ArtistViewController.swift in Sources */,
+				66F426741D5CF71B0073E49B /* EditProfileController.swift in Sources */,
+				66726BE61D627183000CC53A /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

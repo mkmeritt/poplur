@@ -21,7 +21,7 @@ import FirebaseAuth
  field to click artist version or still youtubeUsername 
  */
 
-class UserController: UIViewController {
+class UserController: IndexViewController, UITextFieldDelegate {
     
     var emailField: UITextField = UITextField()
     var passwordField: UITextField = UITextField()
@@ -93,7 +93,7 @@ class UserController: UIViewController {
         
         //View
         
-        
+        self.signUpButton.addTarget(self, action: #selector(UserController.gotoProfilePage), forControlEvents: .TouchUpInside)
         
         //email textfield constraints
         let emailFieldCenterX = NSLayoutConstraint(item: self.emailField, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
@@ -199,4 +199,25 @@ class UserController: UIViewController {
         try! FIRAuth.auth()!.signOut()
         self.signoutButton.alpha = 0.0
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func gotoProfilePage() {
+        
+        let vc = UIStoryboard(name:"MainStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("EditProfileVC")
+        
+        presentViewController(vc, animated: true, completion: nil)
+        
+    }
+    
+    
 }

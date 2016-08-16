@@ -8,44 +8,34 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
-    
-    
-    
+class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     var maxIndex:Int = 3 // you should set this dynamically
     let minIndex:Int = 0
+    
+    var currentIndex: Int = 0
+    
+    let allPages = [MainViewController(index:0), UserController(index:1), CityViewController(index:2), MovieController(index:3)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         
-        let initialViewController = createViewControllerWithIndex(0)
+        let initialViewController = allPages[0]
         
         self.view.backgroundColor = UIColor.blackColor()
         
         self.setViewControllers([initialViewController], direction: .Forward, animated: false, completion: nil)
-
+        
+       
     }
     
-    private func createViewControllerWithIndex(index:Int) -> UIViewController {
-        print("Index is %d", index)
-
-        switch index {
-        case 0:
-            return MainViewController(index:index)
-        case 1:
-            return CityViewController(index:index)
-        case 2:
-            let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("ArtistVC") as! ArtistViewController
-            vc.index = index
-            return vc
-        default:
-            return ArtistViewController(index:index)
+    func moveToNextPage () {
+        print(currentIndex)
+        if(currentIndex == 2) {
+            let nextVC = allPages[3]
+            self.setViewControllers([nextVC], direction: .Forward, animated: true, completion: nil)
         }
-        
-        
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -57,9 +47,17 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         }
         else{
         index += 1
-            
+       
         }
-        return createViewControllerWithIndex(index)
+        
+        currentIndex = index
+
+      /*
+        if(currentIndex == 2) {
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(PageViewController.moveToNextPage), userInfo: nil, repeats: false)
+            }
+        */
+        return allPages[index]
         
     }
     
@@ -74,8 +72,21 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         else {
         index -= 1
         }
+        
+        currentIndex = index
+
+        return allPages[index]
+    }
     
-        return createViewControllerWithIndex(index)
+    func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+        
+        let vc = pendingViewControllers.first as! IndexViewController
+        
+        var index = vc.index
+        
+       
+        
+        
     }
     
     

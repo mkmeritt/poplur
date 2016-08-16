@@ -15,6 +15,9 @@ class CityViewController: IndexViewController {
     
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
     var videoPlayer: AVPlayer!
+    
+    let torontoImg: UIImage = UIImage(named: "toronto")!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,10 @@ class CityViewController: IndexViewController {
         self.view.addSubview(movieView)
         
         self.view.backgroundColor = UIColor.blackColor()
+        
+        let torontoImgView: UIImageView! = UIImageView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, 500, torontoImg.size.width, torontoImg.size.height))
+        torontoImgView.image = torontoImg
+        self.view.addSubview(torontoImgView)
         
         let session: NSError! = nil
         let path: NSURL! = NSBundle.mainBundle().URLForResource("torontoclip", withExtension: "mp4")
