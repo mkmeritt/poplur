@@ -12,7 +12,10 @@ import AVFoundation
 class MovieController: IndexViewController {
     
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
+    var doubleTap: UITapGestureRecognizer! = nil
     var videoPlayer: AVPlayer!
+    
+    var flipped = false
     
     let voteUpImg: UIImage! = UIImage(named: "upvote")
     let voteDownImg: UIImage! = UIImage(named: "downvote")
@@ -45,6 +48,11 @@ class MovieController: IndexViewController {
     }
 
     override func viewDidLoad() {
+        
+        doubleTap = UITapGestureRecognizer(target: self, action: #selector(MovieController.onDoubleTap))
+        doubleTap.numberOfTapsRequired = 2
+        
+        movieView.addGestureRecognizer(doubleTap)
         self.view.addSubview(movieView)
         
         self.view.backgroundColor = UIColor.blackColor()
@@ -92,6 +100,17 @@ class MovieController: IndexViewController {
         videoPlayer.play()
     }
     
- 
-
+    func onDoubleTap() {
+        
+        let vc = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("ArtistVC") as! ArtistViewController
+        vc.vcView = self.view
+        
+        if(flipped == false) {
+        UIView.transitionFromView(self.movieView, toView: vc.view, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            flipped = true
+        } else {
+            UIView.transitionFromView(vc.view, toView: self.movieView, duration: 1, options: .TransitionFlipFromLeft, completion: nil)
+        }
+        //presentViewController(vc, animated: true, completion: nil)
+    }
 }

@@ -12,6 +12,10 @@ import Firebase
 
 class ArtistViewController: IndexViewController {
     
+    var vcView: UIView!
+    
+    var doubleTap: UITapGestureRecognizer! = nil
+    
     @IBOutlet weak var artistImgView: UIImageView!
     
     @IBOutlet weak var artistNameLbl: UILabel!
@@ -24,12 +28,30 @@ class ArtistViewController: IndexViewController {
     @IBAction func fastFwdBtnPressed(sender: AnyObject) {
     }
     
-    func setUpArtistPage(name: String!, image: UIImage, bio: String!) {
+    func setUpArtistPage(name: String!, image: UIImage, bio: String) {
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.purpleColor()
+        
+        doubleTap = UITapGestureRecognizer(target: self, action: #selector(ArtistViewController.onTap))
+        doubleTap.numberOfTapsRequired = 1
+        
+        artistImgView.clipsToBounds = true
+        
+        artistImgView.userInteractionEnabled = true
+        artistImgView.backgroundColor = UIColor.yellowColor()
+        artistImgView.addGestureRecognizer(doubleTap)
+        
+        
     }
+    
+    func onTap() {
+        
+        UIView.transitionFromView(self.view, toView: vcView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
 
+    }
 }
