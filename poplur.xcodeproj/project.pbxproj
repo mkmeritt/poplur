@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66365C8B1D63AFA100BB9310 /* roywoodsgwan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */; };
 		663EF5EC1D5FBEBB0076252D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EF5EB1D5FBEBB0076252D /* PageViewController.swift */; };
 		663EF5EF1D5FC5E00076252D /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EF5EE1D5FC5E00076252D /* IndexViewController.swift */; };
 		663EF5F11D60096F0076252D /* torontoclip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 663EF5F01D60096E0076252D /* torontoclip.mp4 */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		309CFD0DDAC0986597DF698E /* Pods-poplur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.release.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.release.xcconfig"; sourceTree = "<group>"; };
+		66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = roywoodsgwan.mp4; sourceTree = "<group>"; };
 		663EF5EB1D5FBEBB0076252D /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		663EF5EE1D5FC5E00076252D /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		663EF5F01D60096E0076252D /* torontoclip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = torontoclip.mp4; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		66F426921D5D0D250073E49B /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */,
 				66726BEB1D629B88000CC53A /* safefeel.mp4 */,
 				66F426931D5D0D250073E49B /* nyc_liberty.mov */,
 				66F426941D5D0D250073E49B /* nyc_subway.mov */,
@@ -437,6 +440,7 @@
 				66726BDC1D6241E4000CC53A /* Info.plist in Resources */,
 				66F426BE1D5D0D250073E49B /* statspage - desiigner.png in Resources */,
 				66F426B11D5D0D250073E49B /* cntower.jpeg in Resources */,
+				66365C8B1D63AFA100BB9310 /* roywoodsgwan.mp4 in Resources */,
 				66F426AD1D5D0D250073E49B /* biopage - safe.png in Resources */,
 				663EF5F51D617E520076252D /* bio.png in Resources */,
 				66F426A81D5D0D250073E49B /* artistpage - roy woods.png in Resources */,
