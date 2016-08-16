@@ -10,10 +10,14 @@ import UIKit
 import AVFoundation
 import Firebase
 
+protocol ArtistViewControllerDelegate {
+    func doubleTapped()
+}
+
 class ArtistViewController: IndexViewController {
     
-    var vcView: UIView!
-    
+    var delegate: ArtistViewControllerDelegate?
+        
     var doubleTap: UITapGestureRecognizer! = nil
     
     @IBOutlet weak var artistImgView: UIImageView!
@@ -37,21 +41,17 @@ class ArtistViewController: IndexViewController {
         
         view.backgroundColor = UIColor.purpleColor()
         
-        doubleTap = UITapGestureRecognizer(target: self, action: #selector(ArtistViewController.onTap))
-        doubleTap.numberOfTapsRequired = 1
+        doubleTap = UITapGestureRecognizer(target: self, action: #selector(ArtistViewController.onDoubleTap))
+        doubleTap.numberOfTapsRequired = 2
         
         artistImgView.clipsToBounds = true
         
         artistImgView.userInteractionEnabled = true
         artistImgView.backgroundColor = UIColor.yellowColor()
         artistImgView.addGestureRecognizer(doubleTap)
-        
-        
     }
     
-    func onTap() {
-        
-        UIView.transitionFromView(self.view, toView: vcView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-
+    func onDoubleTap() {
+        delegate?.doubleTapped()
     }
 }

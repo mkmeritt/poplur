@@ -67,6 +67,7 @@
 		66F426D31D5D15490073E49B /* upvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426CD1D5D15480073E49B /* upvote.png */; };
 		69005D9A6DCC8ED229E6B7ED /* Pods_poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */; };
 		92BE94EE1D62275A00D99295 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE94ED1D62275A00D99295 /* UserController.swift */; };
+		9A2886471D63B5880035C516 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2886461D63B5880035C516 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		66F426CD1D5D15480073E49B /* upvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upvote.png; sourceTree = "<group>"; };
 		66F426D41D5D16720073E49B /* poplur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poplur.png; sourceTree = "<group>"; };
 		92BE94ED1D62275A00D99295 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = designs/UserController.swift; sourceTree = "<group>"; };
+		9A2886461D63B5880035C516 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.debug.xcconfig"; sourceTree = "<group>"; };
 		EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poplur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 		668597821D5533AC00601478 /* poplur */ = {
 			isa = PBXGroup;
 			children = (
+				9A2886461D63B5880035C516 /* UIViewController.swift */,
 				66726BDD1D6241F3000CC53A /* Assets.xcassets */,
 				66726BE71D62725A000CC53A /* MovieController.swift */,
 				663EF5EE1D5FC5E00076252D /* IndexViewController.swift */,
@@ -532,6 +535,7 @@
 			files = (
 				663EF5EC1D5FBEBB0076252D /* PageViewController.swift in Sources */,
 				6685979A1D569A1100601478 /* MainViewController.swift in Sources */,
+				9A2886471D63B5880035C516 /* UIViewController.swift in Sources */,
 				66726BE81D62725A000CC53A /* MovieController.swift in Sources */,
 				66726BE41D626610000CC53A /* EditProfileDetailController.swift in Sources */,
 				66726BE01D624203000CC53A /* InitialSignInViewController.swift in Sources */,
