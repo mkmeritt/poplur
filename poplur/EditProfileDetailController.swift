@@ -8,8 +8,13 @@
 
 import UIKit
 
-class EditProfileDetailController: IndexViewController, UITextFieldDelegate {
+class EditProfileDetailController: IndexViewController, UITextFieldDelegate, UITextViewDelegate {
     
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var bioEditTextView: UITextView!
     
     @IBAction func doneBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -29,17 +34,29 @@ class EditProfileDetailController: IndexViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        
+        bioEditTextView.textColor = UIColor.whiteColor()
+        artistNameTxtField.textColor = UIColor.whiteColor()
+        
+        
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         artistNameTxtField.resignFirstResponder()
         
-        //set artist name to Firebase account name
-        
         return true
     }
     
+    func textViewDidEndEditing(textView: UITextView) {
+        bioEditTextView.endEditing(true)
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-            self.view.endEditing(true)
+            artistNameTxtField.endEditing(true)
+            bioEditTextView.endEditing(true)
     }
 }

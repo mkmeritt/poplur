@@ -10,12 +10,12 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var maxIndex:Int = 3 // you should set this dynamically
+    var maxIndex:Int = 6 // you should set this dynamically
     let minIndex:Int = 0
     
     var currentIndex: Int = 0
     
-    let allPages = [MainViewController(index:0), UserController(index:1), CityViewController(index:2), MovieController(index:3)]
+    let allPages = [MainViewController(index:0), UserController(index:1), CityViewController(index:2), MovieController(index:3), MovieController(index:4), MovieController(index:5), MovieController(index:6)]
     
     override func viewDidLoad() {
         super.viewDidLoad()

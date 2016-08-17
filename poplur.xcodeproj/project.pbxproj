@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		66365C8B1D63AFA100BB9310 /* roywoodsgwan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */; };
+		66365C8D1D63FF9800BB9310 /* safe.png in Resources */ = {isa = PBXBuildFile; fileRef = 66365C8C1D63FF9800BB9310 /* safe.png */; };
+		66365C951D63FFD500BB9310 /* Eternity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C8E1D63FFD500BB9310 /* Eternity.mp3 */; };
+		66365C961D63FFD500BB9310 /* Back2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C8F1D63FFD500BB9310 /* Back2.mp3 */; };
+		66365C971D63FFD500BB9310 /* WayOut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C901D63FFD500BB9310 /* WayOut.mp3 */; };
+		66365C981D63FFD500BB9310 /* Feel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C911D63FFD500BB9310 /* Feel.mp3 */; };
+		66365C991D63FFD500BB9310 /* Siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C921D63FFD500BB9310 /* Siri.mp3 */; };
+		66365C9B1D63FFD500BB9310 /* NuhTime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C941D63FFD500BB9310 /* NuhTime.mp3 */; };
+		66365C9D1D63FFF800BB9310 /* ArtistDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66365C9C1D63FFF800BB9310 /* ArtistDataSource.swift */; };
+		66365C9F1D64145800BB9310 /* Jealousy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365C9E1D64145800BB9310 /* Jealousy.mp3 */; };
+		66365CA11D6414F600BB9310 /* roywoods.png in Resources */ = {isa = PBXBuildFile; fileRef = 66365CA01D6414F600BB9310 /* roywoods.png */; };
+		66365CA31D641D8F00BB9310 /* danielCeasar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66365CA21D641D8F00BB9310 /* danielCeasar.mp4 */; };
+		66365CA51D641F7C00BB9310 /* danielceasarScream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365CA41D641F7C00BB9310 /* danielceasarScream.mp3 */; };
+		66365CA71D641F8400BB9310 /* danielCeasarpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66365CA61D641F8400BB9310 /* danielCeasarpic.jpg */; };
+		66365CA91D64278400BB9310 /* beatsbynav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66365CA81D64278400BB9310 /* beatsbynav.jpg */; };
+		66365CAB1D64278800BB9310 /* navUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66365CAA1D64278800BB9310 /* navUp.mp3 */; };
+		66365CAD1D642CB700BB9310 /* navTenToes.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 66365CAC1D642CB700BB9310 /* navTenToes.mp4 */; };
 		663EF5EC1D5FBEBB0076252D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EF5EB1D5FBEBB0076252D /* PageViewController.swift */; };
 		663EF5EF1D5FC5E00076252D /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EF5EE1D5FC5E00076252D /* IndexViewController.swift */; };
 		663EF5F11D60096F0076252D /* torontoclip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 663EF5F01D60096E0076252D /* torontoclip.mp4 */; };
@@ -30,10 +46,6 @@
 		66DF1A5F1D5D1C5F00D35302 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DF1A5D1D5D1C5F00D35302 /* rewind.png */; };
 		66F426741D5CF71B0073E49B /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F426731D5CF71B0073E49B /* EditProfileController.swift */; };
 		66F4267C1D5D0C7F0073E49B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4267B1D5D0C7F0073E49B /* CityViewController.swift */; };
-		66F426A61D5D0D250073E49B /* artistpage - boogie.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F4267F1D5D0D240073E49B /* artistpage - boogie.png */; };
-		66F426A71D5D0D250073E49B /* artistpage - desiigner.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426801D5D0D240073E49B /* artistpage - desiigner.png */; };
-		66F426A81D5D0D250073E49B /* artistpage - roy woods.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426811D5D0D240073E49B /* artistpage - roy woods.png */; };
-		66F426A91D5D0D250073E49B /* artistpage - safe.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426821D5D0D240073E49B /* artistpage - safe.png */; };
 		66F426AA1D5D0D250073E49B /* biopage - boogie.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426841D5D0D240073E49B /* biopage - boogie.png */; };
 		66F426AB1D5D0D250073E49B /* biopage - desiigner.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426851D5D0D240073E49B /* biopage - desiigner.png */; };
 		66F426AC1D5D0D250073E49B /* biopage - roy woods.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426861D5D0D240073E49B /* biopage - roy woods.png */; };
@@ -68,11 +80,28 @@
 		66F426D31D5D15490073E49B /* upvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F426CD1D5D15480073E49B /* upvote.png */; };
 		69005D9A6DCC8ED229E6B7ED /* Pods_poplur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */; };
 		92BE94EE1D62275A00D99295 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BE94ED1D62275A00D99295 /* UserController.swift */; };
+		9A2886471D63B5880035C516 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2886461D63B5880035C516 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		309CFD0DDAC0986597DF698E /* Pods-poplur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.release.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.release.xcconfig"; sourceTree = "<group>"; };
 		66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = roywoodsgwan.mp4; sourceTree = "<group>"; };
+		66365C8C1D63FF9800BB9310 /* safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safe.png; path = ../symbols/safe.png; sourceTree = "<group>"; };
+		66365C8E1D63FFD500BB9310 /* Eternity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Eternity.mp3; sourceTree = "<group>"; };
+		66365C8F1D63FFD500BB9310 /* Back2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Back2.mp3; sourceTree = "<group>"; };
+		66365C901D63FFD500BB9310 /* WayOut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WayOut.mp3; sourceTree = "<group>"; };
+		66365C911D63FFD500BB9310 /* Feel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Feel.mp3; sourceTree = "<group>"; };
+		66365C921D63FFD500BB9310 /* Siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Siri.mp3; sourceTree = "<group>"; };
+		66365C941D63FFD500BB9310 /* NuhTime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NuhTime.mp3; sourceTree = "<group>"; };
+		66365C9C1D63FFF800BB9310 /* ArtistDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDataSource.swift; sourceTree = "<group>"; };
+		66365C9E1D64145800BB9310 /* Jealousy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jealousy.mp3; sourceTree = "<group>"; };
+		66365CA01D6414F600BB9310 /* roywoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roywoods.png; sourceTree = "<group>"; };
+		66365CA21D641D8F00BB9310 /* danielCeasar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = danielCeasar.mp4; sourceTree = "<group>"; };
+		66365CA41D641F7C00BB9310 /* danielceasarScream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = danielceasarScream.mp3; sourceTree = "<group>"; };
+		66365CA61D641F8400BB9310 /* danielCeasarpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = danielCeasarpic.jpg; sourceTree = "<group>"; };
+		66365CA81D64278400BB9310 /* beatsbynav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beatsbynav.jpg; sourceTree = "<group>"; };
+		66365CAA1D64278800BB9310 /* navUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = navUp.mp3; sourceTree = "<group>"; };
+		66365CAC1D642CB700BB9310 /* navTenToes.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = navTenToes.mp4; sourceTree = "<group>"; };
 		663EF5EB1D5FBEBB0076252D /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		663EF5EE1D5FC5E00076252D /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		663EF5F01D60096E0076252D /* torontoclip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = torontoclip.mp4; sourceTree = "<group>"; };
@@ -96,10 +125,6 @@
 		66DF1A5D1D5D1C5F00D35302 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
 		66F426731D5CF71B0073E49B /* EditProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		66F4267B1D5D0C7F0073E49B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
-		66F4267F1D5D0D240073E49B /* artistpage - boogie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - boogie.png"; sourceTree = "<group>"; };
-		66F426801D5D0D240073E49B /* artistpage - desiigner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - desiigner.png"; sourceTree = "<group>"; };
-		66F426811D5D0D240073E49B /* artistpage - roy woods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - roy woods.png"; sourceTree = "<group>"; };
-		66F426821D5D0D240073E49B /* artistpage - safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artistpage - safe.png"; sourceTree = "<group>"; };
 		66F426841D5D0D240073E49B /* biopage - boogie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "biopage - boogie.png"; sourceTree = "<group>"; };
 		66F426851D5D0D240073E49B /* biopage - desiigner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "biopage - desiigner.png"; sourceTree = "<group>"; };
 		66F426861D5D0D240073E49B /* biopage - roy woods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "biopage - roy woods.png"; sourceTree = "<group>"; };
@@ -134,6 +159,7 @@
 		66F426CD1D5D15480073E49B /* upvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upvote.png; sourceTree = "<group>"; };
 		66F426D41D5D16720073E49B /* poplur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poplur.png; sourceTree = "<group>"; };
 		92BE94ED1D62275A00D99295 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = designs/UserController.swift; sourceTree = "<group>"; };
+		9A2886461D63B5880035C516 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BA9C07C879A4D5B1A1A6E08A /* Pods-poplur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poplur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poplur/Pods-poplur.debug.xcconfig"; sourceTree = "<group>"; };
 		EF395455BD0645DBCD0BF504 /* Pods_poplur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poplur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,6 +206,7 @@
 		668597821D5533AC00601478 /* poplur */ = {
 			isa = PBXGroup;
 			children = (
+				9A2886461D63B5880035C516 /* UIViewController.swift */,
 				66726BDD1D6241F3000CC53A /* Assets.xcassets */,
 				66726BE71D62725A000CC53A /* MovieController.swift */,
 				663EF5EE1D5FC5E00076252D /* IndexViewController.swift */,
@@ -189,6 +216,7 @@
 				66F4267B1D5D0C7F0073E49B /* CityViewController.swift */,
 				66726BE31D62660F000CC53A /* EditProfileDetailController.swift */,
 				66726BE51D627182000CC53A /* ArtistViewController.swift */,
+				66365C9C1D63FFF800BB9310 /* ArtistDataSource.swift */,
 				92BE94ED1D62275A00D99295 /* UserController.swift */,
 				66726BDF1D624203000CC53A /* InitialSignInViewController.swift */,
 				66726BE11D62420E000CC53A /* GoogleService-Info.plist */,
@@ -237,10 +265,19 @@
 		66F4267E1D5D0D240073E49B /* artistpages */ = {
 			isa = PBXGroup;
 			children = (
-				66F4267F1D5D0D240073E49B /* artistpage - boogie.png */,
-				66F426801D5D0D240073E49B /* artistpage - desiigner.png */,
-				66F426811D5D0D240073E49B /* artistpage - roy woods.png */,
-				66F426821D5D0D240073E49B /* artistpage - safe.png */,
+				66365CAA1D64278800BB9310 /* navUp.mp3 */,
+				66365CA81D64278400BB9310 /* beatsbynav.jpg */,
+				66365C8C1D63FF9800BB9310 /* safe.png */,
+				66365CA61D641F8400BB9310 /* danielCeasarpic.jpg */,
+				66365CA01D6414F600BB9310 /* roywoods.png */,
+				66365C8E1D63FFD500BB9310 /* Eternity.mp3 */,
+				66365C9E1D64145800BB9310 /* Jealousy.mp3 */,
+				66365C8F1D63FFD500BB9310 /* Back2.mp3 */,
+				66365C901D63FFD500BB9310 /* WayOut.mp3 */,
+				66365CA41D641F7C00BB9310 /* danielceasarScream.mp3 */,
+				66365C911D63FFD500BB9310 /* Feel.mp3 */,
+				66365C921D63FFD500BB9310 /* Siri.mp3 */,
+				66365C941D63FFD500BB9310 /* NuhTime.mp3 */,
 			);
 			path = artistpages;
 			sourceTree = "<group>";
@@ -288,6 +325,8 @@
 		66F426921D5D0D250073E49B /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				66365CAC1D642CB700BB9310 /* navTenToes.mp4 */,
+				66365CA21D641D8F00BB9310 /* danielCeasar.mp4 */,
 				66365C8A1D63AFA000BB9310 /* roywoodsgwan.mp4 */,
 				66726BEB1D629B88000CC53A /* safefeel.mp4 */,
 				66F426931D5D0D250073E49B /* nyc_liberty.mov */,
@@ -433,8 +472,8 @@
 				66F426BA1D5D0D250073E49B /* my music.png in Resources */,
 				66F426B01D5D0D250073E49B /* citypage - Toronto.png in Resources */,
 				66F426BC1D5D0D250073E49B /* settings.png in Resources */,
+				66365C981D63FFD500BB9310 /* Feel.mp3 in Resources */,
 				66F426C41D5D0D250073E49B /* videopage - safe.png in Resources */,
-				66F426A71D5D0D250073E49B /* artistpage - desiigner.png in Resources */,
 				663EF5F71D61945F0076252D /* addImage.png in Resources */,
 				66F426CE1D5D15490073E49B /* border.png in Resources */,
 				66726BDC1D6241E4000CC53A /* Info.plist in Resources */,
@@ -443,11 +482,11 @@
 				66365C8B1D63AFA100BB9310 /* roywoodsgwan.mp4 in Resources */,
 				66F426AD1D5D0D250073E49B /* biopage - safe.png in Resources */,
 				663EF5F51D617E520076252D /* bio.png in Resources */,
-				66F426A81D5D0D250073E49B /* artistpage - roy woods.png in Resources */,
-				66F426A91D5D0D250073E49B /* artistpage - safe.png in Resources */,
+				66365C961D63FFD500BB9310 /* Back2.mp3 in Resources */,
 				66F426B91D5D0D250073E49B /* poplurdesign.sketch in Resources */,
 				6685978E1D5533AC00601478 /* LaunchScreen.storyboard in Resources */,
 				66F426AA1D5D0D250073E49B /* biopage - boogie.png in Resources */,
+				66365CA11D6414F600BB9310 /* roywoods.png in Resources */,
 				66F426AE1D5D0D250073E49B /* citypage - LA.png in Resources */,
 				66F426D21D5D15490073E49B /* scrollUpWhite.png in Resources */,
 				66F426B71D5D0D250073E49B /* poplursplash.mp4 in Resources */,
@@ -458,24 +497,35 @@
 				66F426BB1D5D0D250073E49B /* profile page.png in Resources */,
 				66F426C01D5D0D250073E49B /* statspage - safe.png in Resources */,
 				66F426BD1D5D0D250073E49B /* statspage - boogie.png in Resources */,
+				66365C951D63FFD500BB9310 /* Eternity.mp3 in Resources */,
 				66F426B21D5D0D250073E49B /* launchpage.png in Resources */,
 				66F426C11D5D0D250073E49B /* videopage - boogie.png in Resources */,
 				66F426AC1D5D0D250073E49B /* biopage - roy woods.png in Resources */,
+				66365CA71D641F8400BB9310 /* danielCeasarpic.jpg in Resources */,
 				66F426B31D5D0D250073E49B /* mainpage.png in Resources */,
 				66F426D11D5D15490073E49B /* scrollUpBlack.png in Resources */,
 				663EF5F31D6127790076252D /* MainStoryboard.storyboard in Resources */,
+				66365C971D63FFD500BB9310 /* WayOut.mp3 in Resources */,
+				66365CA31D641D8F00BB9310 /* danielCeasar.mp4 in Resources */,
 				66F426D31D5D15490073E49B /* upvote.png in Resources */,
 				66F426BF1D5D0D250073E49B /* statspage - roy woods.png in Resources */,
 				66726BEC1D629B88000CC53A /* safefeel.mp4 in Resources */,
 				66F426D01D5D15490073E49B /* play.png in Resources */,
 				66F426AF1D5D0D250073E49B /* citypage - newyork.png in Resources */,
-				66F426A61D5D0D250073E49B /* artistpage - boogie.png in Resources */,
 				66726BE21D62420E000CC53A /* GoogleService-Info.plist in Resources */,
 				66F426B81D5D0D250073E49B /* speakervideo.mov in Resources */,
 				66DF1A5E1D5D1C5F00D35302 /* fastforward.png in Resources */,
+				66365C8D1D63FF9800BB9310 /* safe.png in Resources */,
+				66365CA91D64278400BB9310 /* beatsbynav.jpg in Resources */,
 				663EF5F11D60096F0076252D /* torontoclip.mp4 in Resources */,
+				66365CAD1D642CB700BB9310 /* navTenToes.mp4 in Resources */,
 				66F426CF1D5D15490073E49B /* downvote.png in Resources */,
+				66365CA51D641F7C00BB9310 /* danielceasarScream.mp3 in Resources */,
+				66365CAB1D64278800BB9310 /* navUp.mp3 in Resources */,
+				66365C991D63FFD500BB9310 /* Siri.mp3 in Resources */,
 				66F426B51D5D0D250073E49B /* nyc_liberty.mov in Resources */,
+				66365C9B1D63FFD500BB9310 /* NuhTime.mp3 in Resources */,
+				66365C9F1D64145800BB9310 /* Jealousy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,11 +586,13 @@
 			files = (
 				663EF5EC1D5FBEBB0076252D /* PageViewController.swift in Sources */,
 				6685979A1D569A1100601478 /* MainViewController.swift in Sources */,
+				9A2886471D63B5880035C516 /* UIViewController.swift in Sources */,
 				66726BE81D62725A000CC53A /* MovieController.swift in Sources */,
 				66726BE41D626610000CC53A /* EditProfileDetailController.swift in Sources */,
 				66726BE01D624203000CC53A /* InitialSignInViewController.swift in Sources */,
 				66F4267C1D5D0C7F0073E49B /* CityViewController.swift in Sources */,
 				663EF5EF1D5FC5E00076252D /* IndexViewController.swift in Sources */,
+				66365C9D1D63FFF800BB9310 /* ArtistDataSource.swift in Sources */,
 				92BE94EE1D62275A00D99295 /* UserController.swift in Sources */,
 				66726BDA1D624172000CC53A /* AppDelegate.swift in Sources */,
 				66F426741D5CF71B0073E49B /* EditProfileController.swift in Sources */,

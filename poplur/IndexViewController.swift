@@ -16,6 +16,7 @@ class IndexViewController: UIViewController {
     init(index: Int){
         self.index = index
         super.init(nibName: nil, bundle: nil)
+    
     }
     
     required init?(coder aDecoder: NSCoder) {

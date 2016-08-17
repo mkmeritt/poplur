@@ -5,11 +5,13 @@
 //  Created by Mark Meritt on 2016-08-15.
 //  Copyright © 2016 Apptist. All rights reserved.
 //
-
+ 
 import UIKit
 import AVFoundation
 
 class MovieController: IndexViewController {
+    
+    let vc = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("ArtistVC") as! ArtistViewController
     
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
     var doubleTap: UITapGestureRecognizer! = nil
@@ -59,23 +61,47 @@ class MovieController: IndexViewController {
       
      
         if(self.index == 3) {
+            vc.index = 3
             self.videoLoaded("safefeel", extensionName: "mp4")
+        }
+        
+        if(self.index == 4) {
+            vc.index = 4
+            self.videoLoaded("roywoodsgwan", extensionName: "mp4")
+        }
+        
+        if(self.index == 5) {
+            vc.index = 5
+            self.videoLoaded("danielCeasar", extensionName: "mp4")
+        }
+        
+        if(self.index == 6) {
+            vc.index = 6
+            self.videoLoaded("navTenToes", extensionName: "mp4")
         }
  
         
-        let voteUpBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 + 100, UIScreen.mainScreen().bounds.height / 2 + 250, voteUpImg.size.width / 2, voteUpImg.size.height / 2))
+        let voteUpBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 + 50, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height))
         
         voteUpBtn.setImage(voteUpImg, forState: .Normal)
         voteUpBtn.alpha = 0.5
+       
         
-        self.view.addSubview(voteUpBtn)
+        self.movieView.addSubview(voteUpBtn)
         
-        let voteDownBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 100, UIScreen.mainScreen().bounds.height / 2 + 250, voteUpImg.size.width / 2, voteUpImg.size.height / 2))
+        let voteDownBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 110, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height ))
         
         voteDownBtn.setImage(voteDownImg, forState: .Normal)
         voteDownBtn.alpha = 0.5
         
-        self.view.addSubview(voteDownBtn)
+        if(self.index == 5){
+            voteUpBtn.tintColor = UIColor.blackColor()
+            voteDownBtn.backgroundColor = UIColor.blackColor()
+        }
+        
+        self.movieView.addSubview(voteDownBtn)
+        
+       
 
     }
     
@@ -85,7 +111,7 @@ class MovieController: IndexViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        videoPlayer.play()
+   //     videoPlayer.play()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -102,15 +128,21 @@ class MovieController: IndexViewController {
     
     func onDoubleTap() {
         
-        let vc = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("ArtistVC") as! ArtistViewController
-        vc.vcView = self.view
+        vc.delegate = self
+        displayContentController(vc, frame: nil)
         
-        if(flipped == false) {
-        UIView.transitionFromView(self.movieView, toView: vc.view, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-            flipped = true
-        } else {
-            UIView.transitionFromView(vc.view, toView: self.movieView, duration: 1, options: .TransitionFlipFromLeft, completion: nil)
+        UIView.transitionFromView(self.movieView, toView: vc.view, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight) { (true) in
+            self.videoPlayer.pause()
         }
-        //presentViewController(vc, animated: true, completion: nil)
+        
+    }
+}
+
+extension MovieController : ArtistViewControllerDelegate {
+
+    func doubleTapped() {
+        UIView.transitionFromView(vc.view, toView: self.movieView, duration: 1, options: .TransitionFlipFromLeft) { (true) in
+            self.videoPlayer.play()
+        }
     }
 }
