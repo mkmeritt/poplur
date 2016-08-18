@@ -13,6 +13,8 @@ import FirebaseAuth
 
 class User: NSObject {
     
+    static let sharedInstance = User.init(uid: "", email: "")
+    
     var uid: String
     var email: String
     

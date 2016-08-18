@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
 
 /*
 https://www.googleapis.com/youtube/v3/channels?part=snippet&type=channel&forUsername=Apple&key=AIzaSyCK8NV2bi5TPJ3-wa60C5vEqQMGEx8CQP4&maxResults=50&pageToken= - username channel get (for channel ID)
@@ -17,8 +20,8 @@ https://www.googleapis.com/youtube/v3/search?&channelId=UCE_M8A5yxnLfW0KghEeajjw
 
 class InitialSignInViewController: UIViewController {
     
-    var leftSideTitleAPI: NSString = "https://www.googleapis.com/youtube/v3/channels?part=snippet&type=channel&forUsername="
-    var leftSideChannelAPI: NSString = "https://www.googleapis.com/youtube/v3/search?&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date"
+    var leftSideTitleAPI: NSString = "https://www.googleapis.com/youtube/v3/search?part=id%2Csnippet&maxResults=1&type=channel&q=Beats+by+Nav"
+    var leftSideChannelAPI: NSString = "https://www.googleapis.com/youtube/v3/search?&part=snippet,id&order=date&channelId=UCuI48V3qSHZvZimYgFNJYJg"
     var APIKey: NSString = "&key=AIzaSyCK8NV2bi5TPJ3-wa60C5vEqQMGEx8CQP4&maxResults=50&pageToken="
     
     var userChannelTitle: NSString = ""
@@ -31,6 +34,7 @@ class InitialSignInViewController: UIViewController {
     
     var signUpViewController: UserController?
     
+    var userVideos: NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
