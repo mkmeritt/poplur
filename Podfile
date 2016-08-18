@@ -9,6 +9,6 @@ target 'poplur' do
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
-
+pod "youtube-ios-player-helper", "~> 0.1.6"
 
 end
