@@ -24,7 +24,8 @@ import FirebaseAuth
 class UserController: IndexViewController {
     
     //user stuff
-    var topLabel: UILabel = UILabel()
+    
+    var imageView: UIImageView = UIImageView()
     
     var emailField: UITextField = UITextField()
     var passwordField: UITextField = UITextField()
@@ -60,12 +61,12 @@ class UserController: IndexViewController {
             self.emailField.text = ""
         }
         
-        //labels 
-    
-        self.topLabel.backgroundColor = UIColor.clearColor()
-        self.topLabel.font = UIFont.init(name: "Apple SD Gothic Neo", size: 40)
-        self.topLabel.text = "Step in to Poplurity"
-        self.topLabel.textColor = UIColor.whiteColor()
+        //image view
+        let poplurImg = UIImage(named: "poplur")
+        self.imageView.frame = CGRectMake(-10, UIScreen.mainScreen().bounds.height/2, poplurImg!.size.width, poplurImg!.size.height)
+        self.imageView.image = poplurImg
+        
+        //labels
         
         self.emailLabel.backgroundColor = UIColor.init(white: 0.0, alpha: 0.0)
         self.emailLabel.textColor = UIColor.whiteColor()
@@ -86,7 +87,6 @@ class UserController: IndexViewController {
         self.youtubeLabel.font = UIFont.init(name: "Apple SD Gothic Neo", size: 15)
         
         //textfields
-        
         
         //email textfield
         self.emailField.backgroundColor = UIColor.whiteColor()
@@ -150,99 +150,91 @@ class UserController: IndexViewController {
         self.signoutButton.translatesAutoresizingMaskIntoConstraints = false
         
         //add objects to view
-        self.view.addSubview(self.topLabel)
         self.view.addSubview(self.emailLabel)
         self.view.addSubview(self.emailField)
         self.view.addSubview(self.passwordLabel)
         self.view.addSubview(self.passwordField)
         self.view.addSubview(self.youtubeLabel)
         self.view.addSubview(self.youtubeField)
+        self.view.addSubview(self.imageView)
         self.view.addSubview(self.signUpButton)
         self.view.addSubview(self.logInButton)
         self.view.addSubview(self.signoutButton)
         
         //View
         
-        //title 
-        let titleLabelLeft = NSLayoutConstraint(item: self.topLabel, attribute: .Leading, relatedBy: .Equal, toItem: self.view, attribute: .Leading, multiplier: 1.0, constant: 0)
-        let titleLabelTopConstraint = NSLayoutConstraint(item: self.topLabel, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 0)
-        let titleLabelWidth = NSLayoutConstraint(item: self.topLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width)
-        let titleLabelHeight = NSLayoutConstraint(item: self.topLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.height/2)
-        
-        self.view.addConstraints([titleLabelLeft, titleLabelTopConstraint, titleLabelWidth, titleLabelHeight])
-        
         //email label
-        let emailLabelCenterX = NSLayoutConstraint(item: self.emailLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let emailLabelTopConstraint = NSLayoutConstraint(item: self.emailLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 5)
-        let emailLabelWidth = NSLayoutConstraint(item: self.emailLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
+        let emailLabelLeft = NSLayoutConstraint(item: self.emailLabel, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0)
+        let emailLabelTopConstraint = NSLayoutConstraint(item: self.emailLabel, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20)
+        let emailLabelWidth = NSLayoutConstraint(item: self.emailLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width)
         let emailLabelHeight = NSLayoutConstraint(item: self.emailLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 15)
         
-        self.view.addConstraints([emailLabelCenterX, emailLabelTopConstraint, emailLabelWidth, emailLabelHeight])
+        self.view.addConstraints([emailLabelLeft, emailLabelTopConstraint, emailLabelWidth, emailLabelHeight])
 
         
         //email textfield constraints
         let emailFieldCenterX = NSLayoutConstraint(item: self.emailField, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let emailFieldTopConstraint = NSLayoutConstraint(item: self.emailField, attribute: .Top, relatedBy: .Equal, toItem: self.emailLabel, attribute: .Top, multiplier: 1.0, constant: 13)
-        let emailFieldWidth = NSLayoutConstraint(item: self.emailField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
+        let emailFieldTopConstraint = NSLayoutConstraint(item: self.emailField, attribute: .Top, relatedBy: .Equal, toItem: self.emailLabel, attribute: .Top, multiplier: 1.0, constant: 30)
+        let emailFieldWidth = NSLayoutConstraint(item: self.emailField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width - 50)
         let emailFieldHeight = NSLayoutConstraint(item: self.emailField, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 30)
         
         self.view.addConstraints([emailFieldCenterX, emailFieldTopConstraint, emailFieldWidth, emailFieldHeight])
         
         //password label
-        let passwordLabelCenterX = NSLayoutConstraint(item: self.passwordLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let passwordLabelTopConstraint = NSLayoutConstraint(item: self.passwordLabel, attribute: .Top, relatedBy: .Equal, toItem: self.emailField, attribute: .Top, multiplier: 1.0, constant: 35)
-        let passwordLabelWidth = NSLayoutConstraint(item: self.passwordLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
+        let passwordLabelLeft = NSLayoutConstraint(item: self.passwordLabel, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0)
+        let passwordLabelTopConstraint = NSLayoutConstraint(item: self.passwordLabel, attribute: .Top, relatedBy: .Equal, toItem: self.emailField, attribute: .Top, multiplier: 1.0, constant: 60)
+        let passwordLabelWidth = NSLayoutConstraint(item: self.passwordLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width)
         let passwordLabelHeight = NSLayoutConstraint(item: self.passwordLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 15)
         
-        self.view.addConstraints([passwordLabelCenterX, passwordLabelTopConstraint, passwordLabelWidth, passwordLabelHeight])
+        self.view.addConstraints([passwordLabelLeft, passwordLabelTopConstraint, passwordLabelWidth, passwordLabelHeight])
         
         //password textfield constraints
         let passwordFieldCenterX = NSLayoutConstraint(item: self.passwordField, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let passwordFieldTopConstraint = NSLayoutConstraint(item: self.passwordField, attribute: .Top, relatedBy: .Equal, toItem: self.passwordLabel, attribute: .Top, multiplier: 1.0, constant: 13)
-        let passwordFieldWidth = NSLayoutConstraint(item: self.passwordField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
+        let passwordFieldTopConstraint = NSLayoutConstraint(item: self.passwordField, attribute: .Top, relatedBy: .Equal, toItem: self.passwordLabel, attribute: .Top, multiplier: 1.0, constant: 30)
+        let passwordFieldWidth = NSLayoutConstraint(item: self.passwordField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width - 50)
         let passwordFieldHeight = NSLayoutConstraint(item: self.passwordField, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 30)
         
         self.view.addConstraints([passwordFieldCenterX, passwordFieldTopConstraint, passwordFieldWidth, passwordFieldHeight])
         
         //youtube label
-        let youtubeLabelCenterX = NSLayoutConstraint(item: self.youtubeLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let youtubeLabelTopConstraint = NSLayoutConstraint(item: self.youtubeLabel, attribute: .Top, relatedBy: .Equal, toItem: self.passwordField, attribute: .Top, multiplier: 1.0, constant: 35)
+        let youtubeLabelLeft = NSLayoutConstraint(item: self.youtubeLabel, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0)
+        let youtubeLabelTopConstraint = NSLayoutConstraint(item: self.youtubeLabel, attribute: .Top, relatedBy: .Equal, toItem: self.passwordField, attribute: .Top, multiplier: 1.0, constant: 60)
         let youtubeLabelWidth = NSLayoutConstraint(item: self.youtubeLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width)
         let youtubeLabelHeight = NSLayoutConstraint(item: self.youtubeLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 15)
         
-        self.view.addConstraints([youtubeLabelCenterX, youtubeLabelTopConstraint, youtubeLabelWidth, youtubeLabelHeight])
+        self.view.addConstraints([youtubeLabelLeft, youtubeLabelTopConstraint, youtubeLabelWidth, youtubeLabelHeight])
         
         //youtube textfield constraints
         let youtubeFieldCenterX = NSLayoutConstraint(item: self.youtubeField, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let youtubeFieldTopConstraint = NSLayoutConstraint(item: self.youtubeField, attribute: .Top, relatedBy: .Equal, toItem: self.youtubeLabel, attribute: .Top, multiplier: 1.0, constant: 13)
-        let youtubeFieldWidth = NSLayoutConstraint(item: self.youtubeField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
+        let youtubeFieldTopConstraint = NSLayoutConstraint(item: self.youtubeField, attribute: .Top, relatedBy: .Equal, toItem: self.youtubeLabel, attribute: .Top, multiplier: 1.0, constant: 30)
+        let youtubeFieldWidth = NSLayoutConstraint(item: self.youtubeField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: self.view.bounds.width - 50)
         let youtubeFieldHeight = NSLayoutConstraint(item: self.youtubeField, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 30)
         
         self.view.addConstraints([youtubeFieldCenterX, youtubeFieldTopConstraint, youtubeFieldWidth, youtubeFieldHeight])
-    
+        
         //signup button constraints
-        let signupbuttonCenterX = NSLayoutConstraint(item: self.signUpButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let signupbuttonTopConstraint = NSLayoutConstraint(item: self.signUpButton, attribute: .Top, relatedBy: .Equal, toItem: self.youtubeField, attribute: .Top, multiplier: 1.0, constant: 70)
-        let signupbuttonWidth = NSLayoutConstraint(item: self.signUpButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 150)
+        let signupbuttonLeft = NSLayoutConstraint(item: self.signUpButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 25)
+        let signupbuttonBottomConstraint = NSLayoutConstraint(item: self.signUpButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -35)
+        let signupbuttonWidth = NSLayoutConstraint(item: self.signUpButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
         let signupbuttonHeight = NSLayoutConstraint(item: self.signUpButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 40)
         
-        self.view.addConstraints([signupbuttonCenterX, signupbuttonTopConstraint, signupbuttonWidth, signupbuttonHeight])
+        self.view.addConstraints([signupbuttonLeft, signupbuttonBottomConstraint, signupbuttonWidth, signupbuttonHeight])
         
         //login button constraints
-        let loginButtonCenterX = NSLayoutConstraint(item: self.logInButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let loginButtonTopConstraint = NSLayoutConstraint(item: self.logInButton, attribute: .Top, relatedBy: .Equal, toItem: self.signUpButton, attribute: .Top, multiplier: 1.0, constant: 50)
-        let loginButtonWidth = NSLayoutConstraint(item: self.logInButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 150)
+        let loginButtonRight = NSLayoutConstraint(item: self.logInButton, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -25)
+        let loginButtonBottomConstraint = NSLayoutConstraint(item: self.logInButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -35)
+        let loginButtonWidth = NSLayoutConstraint(item: self.logInButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
         let loginButtonHeight = NSLayoutConstraint(item: self.logInButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 40)
         
-        self.view.addConstraints([loginButtonCenterX, loginButtonTopConstraint, loginButtonWidth, loginButtonHeight])
+        self.view.addConstraints([loginButtonRight, loginButtonBottomConstraint, loginButtonWidth, loginButtonHeight])
 
         //signout button constraints
         let signoutButtonCenterX = NSLayoutConstraint(item: self.signoutButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let signoutButtonTopConstraint = NSLayoutConstraint(item: self.signoutButton, attribute: .Top, relatedBy: .Equal, toItem: self.logInButton, attribute: .Top, multiplier: 1.0, constant: 50)
-        let signoutButtonWidth = NSLayoutConstraint(item: self.signoutButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 150)
+        let signoutButtonBottomConstraint = NSLayoutConstraint(item: self.signoutButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 50)
+        let signoutButtonWidth = NSLayoutConstraint(item: self.signoutButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100)
         let signoutButtonHeight = NSLayoutConstraint(item: self.signoutButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 40)
         
-        self.view.addConstraints([signoutButtonCenterX, signoutButtonTopConstraint, signoutButtonWidth, signoutButtonHeight])
+        self.view.addConstraints([signoutButtonCenterX, signoutButtonBottomConstraint, signoutButtonWidth, signoutButtonHeight])
     }
     
     // signup button action
@@ -345,7 +337,7 @@ class UserController: IndexViewController {
                 }
             })
         }
-    }
+    }   
     
     func touchSignout(sender: UIButton!) {
         try! FIRAuth.auth()!.signOut()
