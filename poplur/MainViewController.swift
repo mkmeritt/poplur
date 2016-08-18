@@ -8,18 +8,24 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
-class MainViewController: IndexViewController {
+class MainViewController: IndexViewController, CLLocationManagerDelegate {
     
        
     let movieView: UIView! = UIView(frame: UIScreen.mainScreen().bounds)
     var videoPlayer: AVPlayer!
     var swipeLeft: UISwipeGestureRecognizer!
     var window: UIWindow?
+    
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
      
         self.view.addSubview(movieView)
      

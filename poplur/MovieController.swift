@@ -81,7 +81,7 @@ class MovieController: IndexViewController {
         }
  
         
-        let voteUpBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 + 50, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height))
+        let voteUpBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 + 30, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height))
         
         voteUpBtn.setImage(voteUpImg, forState: .Normal)
         voteUpBtn.alpha = 0.5
@@ -89,15 +89,10 @@ class MovieController: IndexViewController {
         
         self.movieView.addSubview(voteUpBtn)
         
-        let voteDownBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 110, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height ))
+        let voteDownBtn: UIButton! = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 90, UIScreen.mainScreen().bounds.height / 2 + 260, voteUpImg.size.width, voteUpImg.size.height ))
         
         voteDownBtn.setImage(voteDownImg, forState: .Normal)
         voteDownBtn.alpha = 0.5
-        
-        if(self.index == 5){
-            voteUpBtn.tintColor = UIColor.blackColor()
-            voteDownBtn.backgroundColor = UIColor.blackColor()
-        }
         
         self.movieView.addSubview(voteDownBtn)
         

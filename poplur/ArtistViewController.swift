@@ -24,6 +24,9 @@ class ArtistViewController: IndexViewController {
     
     var playing = false
     
+    @IBOutlet weak var playerView: UIView!
+    
+    
     @IBOutlet weak var artistImgView: UIImageView!
     
     @IBOutlet weak var artistNameLbl: UILabel!
@@ -112,17 +115,19 @@ class ArtistViewController: IndexViewController {
         
         scrollView.addGestureRecognizer(doubleTap)
         
+        let clearView = UIView()
+        clearView.backgroundColor = UIColor.clearColor()
+        clearView.frame = CGRect(x: 0, y: 650, width: scrollView.bounds.size.width, height: 500)
+        scrollView.addSubview(clearView)
         
-        let view = UIView()
-        view.backgroundColor = UIColor.clearColor()
-        view.frame = CGRect(x: 0, y: 650, width: scrollView.bounds.size.width, height: 500)
-        scrollView.addSubview(view)
-        
+   
         self.view.addSubview(scrollView)
+        
+    //    self.view.addSubview(artistIV)
         
         let textView = UITextView()
         textView.backgroundColor = UIColor.blackColor()
-        textView.frame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y + 50, width: view.bounds.size.width, height: view.bounds.size.height)
+        textView.frame = CGRect(x: clearView.bounds.origin.x, y: clearView.bounds.origin.y + 50, width: clearView.bounds.size.width, height: clearView.bounds.size.height)
         if(self.index == 3) {
 
         textView.text = artistData.safeBio              //
@@ -143,9 +148,16 @@ class ArtistViewController: IndexViewController {
         textView.textColor = UIColor.whiteColor()
         textView.textAlignment = .Center
         textView.font = UIFont(name: "Apple SD Gothic Neo", size: 16)
-        view.addSubview(textView)
+        clearView.addSubview(textView)
         
+     //   let pView = playerView
         
+       // pView.removeFromSuperview()
+        
+       // pView.frame = CGRectMake(artistImgView.bounds.width/2, artistImgView.bounds.height/2, pView.frame.width / 2, pView.frame.height / 2)
+        
+     //   self.view.addSubview(pView)
+
     }
     
     func onDoubleTap() {

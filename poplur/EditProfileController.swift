@@ -8,26 +8,19 @@
 
 import UIKit
 
-class EditProfileController: IndexViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditProfileController: IndexViewController{
     var artistImg: UIImage!
     var scrollView: UIScrollView!
+    
+    var doubleTap: UITapGestureRecognizer! = nil
+    
+    var swipeDown: UISwipeGestureRecognizer! = nil
+
     
     
     @IBOutlet weak var artistImgView: UIImageView!  //load firebase image into image view
     
-    @IBAction func addImgBtnPressed(sender: AnyObject) { //edit profile
-        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
-        let imagePickerController = UIImagePickerController()
-        
-        // Only allow photos to be picked, not taken.
-        imagePickerController.sourceType = .PhotoLibrary
-        
-        // Make sure ViewController is notified when the user picks an image.
-        imagePickerController.delegate = self
-        
-        presentViewController(imagePickerController, animated: true, completion: nil)
-
-    }
+  
     
     @IBAction func playBtnPressed(sender: AnyObject) { //play track
     }
@@ -40,24 +33,7 @@ class EditProfileController: IndexViewController, UIImagePickerControllerDelegat
     @IBAction func rewindBtnPressed(sender: AnyObject) { //previous track
     }
     
-    // MARK: UIImagePickerControllerDelegate
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        // Dismiss the picker if the user canceled.
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        // The info dictionary contains multiple representations of the image, and this uses the original.
-        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        // Set photoImageView to display the selected image.
-        
-        // Dismiss the picker.
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    
-    
+       
     
     override init(index: Int){
         super.init(index: index)
@@ -72,7 +48,52 @@ class EditProfileController: IndexViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        doubleTap = UITapGestureRecognizer(target: self, action: #selector(EditProfileController.onDoubleTap))
+        doubleTap.numberOfTapsRequired = 1
+        
+        let scrollView = UIScrollView()
+        scrollView.frame = self.view.bounds
+        scrollView.contentSize = CGSize(width: self.view.bounds.size.width, height: 1000)
+        
+        scrollView.showsVerticalScrollIndicator = false
+        
+        swipeDown = UISwipeGestureRecognizer(target: scrollView, action: #selector(EditProfileController.handleSwipeDown))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        
+        
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        view.frame = CGRect(x: 0, y: 650, width: scrollView.bounds.size.width, height: 500)
+        scrollView.addSubview(view)
+        
+        self.view.addSubview(scrollView)
+        
+        let textView = UITextView()
+        textView.backgroundColor = UIColor.blackColor()
+        textView.frame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y + 50, width: view.bounds.size.width, height: view.bounds.size.height)
+
+            textView.textColor = UIColor.whiteColor()
+            textView.textAlignment = .Center
+            textView.font = UIFont(name: "Apple SD Gothic Neo", size: 16)
+            view.addSubview(textView)
+       
+        scrollView.addGestureRecognizer(doubleTap)
+        scrollView.addGestureRecognizer(swipeDown)
+
       
+    }
+    
+    func handleSwipeDown() {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func onDoubleTap() {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("EditProfileDetailVC") as! EditProfileDetailController
+        presentViewController(vc, animated: true, completion: nil)
     }
     
   }
