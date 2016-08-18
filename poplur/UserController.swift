@@ -21,7 +21,7 @@ import FirebaseAuth
  field to click artist version or still youtubeUsername 
  */
 
-class UserController: UIViewController {
+class UserController: IndexViewController {
     
     //user stuff
     var topLabel: UILabel = UILabel()
